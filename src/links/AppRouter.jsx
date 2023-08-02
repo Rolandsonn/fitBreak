@@ -2,9 +2,14 @@ import { authRoutes, outRoutes, publicRoutes } from "./routes.jsx";
 import { Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Layout from "../components/Layout.jsx";
+import { useEffect } from "react";
 
 export default function AppRouter() {
   const { isAuthenticated } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

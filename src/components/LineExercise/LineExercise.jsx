@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./LineExercise.module.scss";
-
+import halfLine from "../../assets/infoExercise/halfLine.jpg";
 const LineExercise = () => {
   return (
     <div className={styles.line}>
-      <span></span>
-      <span></span>
-      <span></span>
+      <img src={halfLine} alt="" />
     </div>
   );
 };

@@ -18,6 +18,7 @@ import { InfoExercises } from "../pages/InfoExercises/InfoExercises";
 import LegPage from "../pages/InfoExercises/LegPage";
 import NeckPage from "../pages/InfoExercises/NeckPage";
 import LoginPage from "../pages/LoginPage";
+import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import RegisterPage from "../pages/RegisterPage";
 
 import { links } from "./links";
@@ -47,6 +48,10 @@ export const publicRoutes = [
       {
         path: "/",
         element: <LandingPage />,
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,
       },
       {
         path: `/categories/`,

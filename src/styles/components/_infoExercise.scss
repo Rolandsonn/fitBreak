@@ -8,6 +8,7 @@
     border-radius: 15px;
     background-color: rgba(47, 200, 248, 0.18);
     margin-top: 35px;
+    margin-bottom: 100px;
     p {
       color: #231f20;
       font-family: Montserrat;
@@ -30,6 +31,14 @@
       border-radius: 30px;
     }
   }
+  &_imgs {
+    text-align: center;
+    margin-top: 30px;
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &_title {
     font-family: "Montserrat";
     font-size: 45px;
@@ -37,6 +46,7 @@
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+    text-align: center;
     color: #019cf4;
   }
   &_wrapper {
@@ -50,8 +60,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  &_title {
   }
   &_text {
     .text_name {

@@ -5,6 +5,7 @@ import shoulderNeck2 from "../../assets/infoExercise/neck2.gif";
 import timer from "../../assets/categories/timer.png";
 import line from "../../assets/infoExercise/line.png";
 import Timer from "../../components/timer/Timer";
+import Exercise from "../../components/Exercise";
 
 const pageInfo = [
   {
@@ -30,56 +31,16 @@ const articles = [
       "Продолжаем разминать шею. Делаем повороты шеи полукругом и в пиковой точке поднимаем голову, вытягивая вверх подбородок. Упражнение полезно для разминки шейно-воротниковой зоны, а также для избавления от второго подбородка.",
   },
 ];
+const text = [
+  "Расслабить мышцы",
+  "Снять нагрузку",
+  "Сбалансировать кровеносное давление",
+];
+
 const NeckPage = () => {
   return (
     <>
-      <div className="container">
-        <div className="infoExercise">
-          {pageInfo.map((item) => (
-            <div className={item.className} key={item.id}>
-              <div className="infoExercise_image">
-                <img src={item.image} alt={item.alt} />
-              </div>
-              <div className="infoExercise_text">
-                <div className="text_name">
-                  <h3>{item.title}</h3>
-                  <img src={timer} alt="timer" />
-                  <p>{item.time}</p>
-                </div>
-                <Timer />
-              </div>
-            </div>
-          ))}
-          <div className="infoExercise_article">
-            {articles.map((title) => (
-              <p>{title.article}</p>
-            ))}
-          </div>
-        </div>
-
-        <div className="infoExercise">
-          {pageInfo.map((item) => (
-            <div className={item.className} key={item.id}>
-              <div className="infoExercise_image">
-                <img src={item.image2} alt={item.alt} />
-              </div>
-              <div className="infoExercise_text">
-                <div className="text_name">
-                  <h3>{item.title}</h3>
-                  <img src={timer} alt="timer" />
-                  <p>{item.time}</p>
-                </div>
-                <Timer />
-              </div>
-            </div>
-          ))}
-          <div className="infoExercise_article">
-            {articles.map((title) => (
-              <p>{title.article2}</p>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Exercise articles={articles} pageInfo={pageInfo} text={text} />
     </>
   );
 };

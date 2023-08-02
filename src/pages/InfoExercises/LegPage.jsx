@@ -5,6 +5,7 @@ import legFoot2 from "../../assets/infoExercise/leg2.gif";
 import timer from "../../assets/categories/timer.png";
 import line from "../../assets/infoExercise/line.png";
 import Timer from "../../components/timer/Timer";
+import Exercise from "../../components/Exercise";
 
 const pageInfo = [
   {
@@ -30,56 +31,16 @@ const articles = [
       "Поставьте ноги под прямым углом, руки положите на сидение стула. На выдохе поднимите правое колено вверх, на вдохе – опустите. На следующем выдохе поменяйте ногу. Поднимайте ногу как можно выше, чтобы стимулировать отток крови. Выполняйте это упражнение в офисе, чтобы предотвратить боль в коленях от долгого сидения, улучшить кровообращение и предотвратить отечность к концу дня.",
   },
 ];
+
+const text = [
+  "Улучшить метаболизм",
+  "Восстановить приток кислорода",
+  "Улучшить кровообращение",
+];
 const LegPage = () => {
   return (
     <>
-      <div className="container">
-        <div className="infoExercise">
-          {pageInfo.map((item) => (
-            <div className={item.className} key={item.id}>
-              <div className="infoExercise_image">
-                <img src={item.image} alt={item.alt} />
-              </div>
-              <div className="infoExercise_text">
-                <div className="text_name">
-                  <h3>{item.title}</h3>
-                  <img src={timer} alt="timer" />
-                  <p>{item.time}</p>
-                </div>
-                <Timer />
-              </div>
-            </div>
-          ))}
-          <div className="infoExercise_article">
-            {articles.map((title) => (
-              <p>{title.article}</p>
-            ))}
-          </div>
-        </div>
-
-        <div className="infoExercise">
-          {pageInfo.map((item) => (
-            <div className={item.className} key={item.id}>
-              <div className="infoExercise_image">
-                <img src={item.image2} alt={item.alt} />
-              </div>
-              <div className="infoExercise_text">
-                <div className="text_name">
-                  <h3>{item.title}</h3>
-                  <img src={timer} alt="timer" />
-                  <p>{item.time}</p>
-                </div>
-                <Timer />
-              </div>
-            </div>
-          ))}
-          <div className="infoExercise_article">
-            {articles.map((title) => (
-              <p>{title.article2}</p>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Exercise pageInfo={pageInfo} articles={articles} text={text} />
     </>
   );
 };
